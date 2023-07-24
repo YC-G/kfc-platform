@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--指定网页支持响应式：电脑和手机自适应-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login!</title>
+
+<div class="card">
+    <div class="card-header">Customer Login</div>
+    <div class="card-body">
+        <form id="form-data">
+            <div class="form-group">
+                <label>Username</label>
+                {% raw xsrf_form_html() %}
+                <input type="text" class="form-control form-width" name="name" placeholder="请输入账号！">
+                <p class="text-danger" id="error-name"></p>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control form-width" name="pwd" placeholder="请输入密码！">
+                <p class="text-danger" id="error-pwd"></p>
+            </div>
+            <div class="form-group">
+                <a href="javascript:void(0);" id="btn-sub" class="btn btn-primary">登录</a>
+            </div>
+        </form>
+    </div>
+</div>
